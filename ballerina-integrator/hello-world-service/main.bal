@@ -6,6 +6,6 @@ service / on httpDefaultListener {
 
     resource function get greeting(string name = "world") returns string {
         // Returns the greeting message as a string
-        return "Hello, " + name + " 15";
+        return "Hello, " + name + " 16";
     }
 }
