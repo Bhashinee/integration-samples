@@ -1,6 +1,6 @@
 import ballerina/io;
 import ballerina/time;
-import bhashinee2025/private_package as pp;
+import bishidev/private_package as pp;
 
 
 public function main() returns error? {
