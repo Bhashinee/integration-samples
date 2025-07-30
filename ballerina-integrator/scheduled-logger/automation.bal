@@ -11,7 +11,7 @@ public function main() returns error? {
 }
 
 function testFunction() returns string {
-    return "This is a test function2";
+    return "This is a test function";
 }
 
 
