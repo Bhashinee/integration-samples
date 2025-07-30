@@ -1,11 +1,12 @@
 import ballerina/http;
 
-listener http:Listener httpDefaultListener = http:getDefaultListener();
+service http:Service /foo on new http:Listener(9090) {
 
-service / on httpDefaultListener {
+    resource function get bar(int value) returns http:Ok|http:BadRequest {
 
-    resource function get greeting(string name = "world") returns string {
-        // Returns the greeting message as a string
-        return "Hello, " + name + " 17";
+        if value < 0 {
+            return <http:BadRequest>{body: "Incorrect ID value"};
+        }
+        return <http:Ok>{body: "Retrieved ID " + value.toString()};
     }
 }
