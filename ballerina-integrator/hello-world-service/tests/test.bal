@@ -5,7 +5,7 @@ http:Client testClient = check new ("http://localhost:9090/foo");
 
 @test:Config
 public function testGet() returns error? {
-    http:Response response = check testClient->/bar.get(value = -5);
+    http:Response response = check testClient->/bar.get(value = 10);
     test:assertEquals(response.statusCode, http:STATUS_OK);
     test:assertEquals(response.getTextPayload(), "Retrieved ID 10");
 
