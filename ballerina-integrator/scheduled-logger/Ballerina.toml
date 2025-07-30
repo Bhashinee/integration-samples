@@ -3,3 +3,8 @@ org = "wso2"
 name = "scheduled_logger"
 version = "0.1.0"
 distribution = "2201.12.0"
+
+# [[dependency]]
+# org = "bhashinee2025"
+# name = "private_package"
+# version = "0.1.0"
