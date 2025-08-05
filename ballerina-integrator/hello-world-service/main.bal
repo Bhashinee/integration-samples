@@ -8,9 +8,7 @@ http:Client httpClient = check new (serviceurl);
 service / on new http:Listener(9090) {
 
     resource function get greeting() returns string|error {
-        http:Request req = new;
-        req.setHeader("Choreo-API-Key", choreoapikey);
-        string payload = check albumClient->/albums({ "Choreo-API-Key": choreoapikey });
+        string payload = check httpClient->/hello({ "Choreo-API-Key": choreoapikey });
         return payload;
     }
 }
