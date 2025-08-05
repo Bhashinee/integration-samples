@@ -1,8 +1,7 @@
 import ballerina/http;
-import ballerina/os;
 
-string serviceurl = os:getEnv("CHOREO_TAILCON_SERVICEURL");
-string choreoapikey = os:getEnv("CHOREO_TAILCON_CHOREOAPIKEY");
+string serviceurl = "http://tailscale-689458782:9090/";
+string choreoapikey = "chk_eyJjb25uZWN0aW9uLWlkIjoiMDFmMDcyMjAtMjAwMS0xZTM4LWJjODctYWExNWE3NGFlYTQ0In0=oItpjA";
 http:Client httpClient = check new (serviceurl);
 
 service / on new http:Listener(9090) {
