@@ -30,5 +30,5 @@ endpoints:
 # +optional Outgoing connection details for the component.
 dependencies:
     connectionReferences:
-    - name: tailscale-connection
+    - name: TailscaleConnection
       resourceRef: service:/default/tailscale/1.0.0/803f0/PROJECT
