@@ -5,7 +5,7 @@ import ballerinax/metrics.logs as _;
 
 // Listen for weather data files on an FTP server
 listener ftp:Listener WeatherData = new (
-    path = "/data/observations/metar/decoded/",
+    path = "/",
     auth = {
         credentials: {
             username: ftpUser,
