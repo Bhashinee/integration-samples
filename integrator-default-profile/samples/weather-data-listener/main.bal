@@ -20,9 +20,11 @@ listener ftp:Listener WeatherData = new (
 // Triggered when new files are added to the FTP path
 service ftp:Service on WeatherData {
     remote function onFileChange(ftp:WatchEvent & readonly event, ftp:Caller caller) returns error? {
+        io:println("New file(s) detected on FTP server.");
         do {
             // Process each newly added file
             foreach ftp:FileInfo addedFile in event.addedFiles {
+                io:println("File found " + addedFile.pathDecoded);
                 // Get file content as a byte stream
                 stream<byte[] & readonly, io:Error?> fileStream = check caller->get(addedFile.pathDecoded);
                 // Read the first chunk of data
