@@ -1,5 +1,6 @@
 import ballerina/http;
 import ballerinax/ai.agent;
+import ballerinax/metrics.logs as _;
 
 listener agent:Listener hrRagAgentListener = new (listenOn = check http:getDefaultListener());
 
