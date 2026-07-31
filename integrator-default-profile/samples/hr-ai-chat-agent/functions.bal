@@ -2,6 +2,7 @@ import ballerinax/openai.chat;
 import ballerinax/openai.embeddings;
 import ballerinax/pinecone.vector;
 import ballerinax/metrics.logs as _;
+import ballerina/observe as _;
 
 embeddings:Client embeddingsClient = check new ({
     auth: {
