@@ -5,16 +5,18 @@ import ballerinax/metrics.logs as _;
 
 // Listen for weather data files on an FTP server
 listener ftp:Listener WeatherData = new (
-    path = "/",
+    path = "/providentbijiraanddevant",
     auth = {
         credentials: {
             username: ftpUser,
             password: ftpPassword
         }
     },
+    protocol = ftp:SFTP,
     host = ftpHost,
+    port = 22,
     pollingInterval = 10, // Check for new files every 10 seconds
-    fileNamePattern = "(.*).TXT" // Process only .TXT files
+    fileNamePattern = "(.*).txt" // Process only .TXT files
 );
 
 // Triggered when new files are added to the FTP path
