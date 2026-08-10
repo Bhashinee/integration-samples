@@ -1,6 +1,7 @@
+import ballerinax/metrics.logs as _;
+import ballerina/observe as _;
 import ballerina/ftp;
 import ballerina/log;
-import ballerinax/metrics.logs as _;
 
 // Listen for weather data files on an FTP server
 listener ftp:Listener WeatherData = new (
