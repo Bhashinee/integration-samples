@@ -7,7 +7,7 @@ service / on new http:Listener(sport) {
 
     resource function get greeting() returns string|error {
         io:println(ftpPassword);
-        return "payload2";
+        return ftpPassword;
     }
 }
 
