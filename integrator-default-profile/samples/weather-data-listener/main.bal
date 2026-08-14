@@ -16,7 +16,7 @@ listener ftp:Listener WeatherData = new (
     protocol = ftp:SFTP,
     host = ftpHost,
     port = 22,
-    pollingInterval = 10 // Check for new files every 10 seconds
+    pollingInterval = 300 // Check for new files every 10 seconds
 );
 
 ftp:Client ftpClient = check new ({
