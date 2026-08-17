@@ -40,8 +40,14 @@ service ftp:Service on WeatherData {
         io:println("---------------New file detected----------------");
         boolean exists = check caller->exists("/providentbijiraanddevant/sftpTest/data.csv");
         if exists {
+            string[][] csvContent = check caller->getCsv("/providentbijiraanddevant/sftpTest/data.csv");
+            io:println("getCsv rows: " + csvContent.length().toString());
+
+            check caller->rename("/providentbijiraanddevant/sftpTest/data.csv", "/providentbijiraanddevant/sftpTest/data1.csv");
+            io:println("---------------Renamed the data.csv file to data1.csv----------------");
+
             io:println("---------------Deleting csv file----------------");
-            check caller->delete("/providentbijiraanddevant/sftpTest/data.csv");
+            check caller->delete("/providentbijiraanddevant/sftpTest/data1.csv");
             io:println("---------------Deleted the data.csv file----------------");
         } else {
             io:println("---------------Putting CSV file----------------");
