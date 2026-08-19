@@ -3,3 +3,8 @@ org = "wso2"
 name = "graphqlservice"
 version = "0.1.0"
 distribution = "2201.13.4"
+
+[[dependency]]
+org="ballerina"
+name="graphql"
+version="1.16.1"
