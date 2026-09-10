@@ -1,6 +1,5 @@
 import ballerina/http;
 import ballerina/io;
-import ballerina/data.yaml;
 
 configurable string name = ?;
 configurable string content = ?;
