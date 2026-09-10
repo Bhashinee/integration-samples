@@ -3,6 +3,7 @@ import ballerina/io;
 
 configurable string name = ?;
 configurable string content = ?;
+configurable string yamlContent = ?;
 
 int sport = 8095;
 
