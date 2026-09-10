@@ -13,6 +13,7 @@ service / on new http:Listener(sport) {
         io:println(ftpPassword);
         io:println(name);
         io:println(content);
+        io:println(yamlContent);
         return ftpPassword;
     }
 }
